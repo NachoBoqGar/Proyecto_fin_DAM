@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1666.0" styleClass="fondo-formularios" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VistaDatosClienteController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1666.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="939.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+               <children>
+                  <Button fx:id="botonRestaurar" disable="true" layoutX="1386.0" layoutY="15.0" mnemonicParsing="false" onAction="#restaurarCliente" onMouseEntered="#restaurarEntrar" onMouseExited="#restaurarSalir" prefHeight="45.0" prefWidth="147.0" styleClass="boton-guardar" stylesheets="@../estilos.css" text="Restarurar">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="botonBajaCliente" cancelButton="true" mnemonicParsing="false" onAction="#bajaCliente" onMouseEntered="#bajaEntrar" onMouseExited="#bajaSAlir" prefHeight="45.0" prefWidth="147.0" styleClass="boton-cancelar" stylesheets="@../estilos.css" text="Baja">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="botonCancelarVistaCliente" cancelButton="true" mnemonicParsing="false" onAction="#cancelarVistaCliente" onMouseEntered="#cancelarEntrar" onMouseExited="#cancelarSalir" prefHeight="45.0" prefWidth="147.0" styleClass="boton-cancelar" stylesheets="@../estilos.css" text="Cancelar">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="botonGuardarCliente" disable="true" layoutX="1657.0" layoutY="13.0" mnemonicParsing="false" onAction="#guardarCambiosCliente" onMouseEntered="#gardarEntrar" onMouseExited="#gardarSalir" prefHeight="45.0" prefWidth="147.0" styleClass="boton-guardar" stylesheets="@../estilos.css" text="Guardar">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <GridPane fx:id="gridPaneEncabezado" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="1646.0" style="-fx-background-color: #D0EFD9;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="704.0" minWidth="10.0" prefWidth="704.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="1123.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane fx:id="gridPaneDatosPersonales" prefHeight="155.0" prefWidth="704.0" GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="406.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="166.0" text="Datos del Personales">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="38.0" prefWidth="65.0" text="DNI:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="10.0" layoutY="37.0" prefHeight="28.0" prefWidth="107.0" text="Nombre:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label prefHeight="40.0" prefWidth="102.0" text="Primer Apellido:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="10.0" layoutY="134.0" prefHeight="38.0" prefWidth="149.0" text="Segundo Apellido:" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="datosDNI" onKeyPressed="#dniModificado" prefHeight="25.0" prefWidth="311.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="datosNombre" onKeyPressed="#nombreModificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="datosApellido1" layoutX="235.0" layoutY="98.0" onKeyPressed="#apellido1Modificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="datosApellido2" layoutX="235.0" layoutY="138.0" onKeyPressed="#apellido2Modificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="etiquetaCampoObligatorio" prefHeight="28.0" prefWidth="448.0" text="*Falta algún campo obligatorio por cubrir" visible="false" GridPane.columnIndex="1" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </GridPane>
+                        <GridPane layoutX="15.0" layoutY="15.0" prefHeight="148.0" prefWidth="609.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="406.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="143.0" text="Datos de Registro">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="38.0" prefWidth="65.0" text="ID:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="37.0" prefHeight="28.0" prefWidth="107.0" text="Fecha de Alta:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="40.0" prefWidth="102.0" text="Estado:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="datosID" disable="true" editable="false" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="datosFechaAlta" disable="true" editable="false" layoutX="162.0" layoutY="31.0" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="datosEstado" disable="true" editable="false" layoutX="162.0" layoutY="31.0" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                        <GridPane layoutX="10.0" layoutY="138.0" prefHeight="128.0" prefWidth="827.0" GridPane.columnIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="842.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="143.0" text="Datos de Contacto">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="38.0" prefWidth="65.0" text="Teléfono:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="37.0" prefHeight="28.0" prefWidth="107.0" text="Dirección" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="40.0" prefWidth="102.0" text="E-mail" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="datosTelefono" maxWidth="-Infinity" onKeyPressed="#telefonoModificado" prefHeight="25.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="datosDireccion" layoutX="235.0" layoutY="98.0" maxWidth="-Infinity" onKeyPressed="#direccionModificado" prefHeight="25.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="formatoCorreoIncorrecto" prefHeight="56.0" prefWidth="802.0" text="*Formato de correo incorrecto" visible="false" GridPane.columnIndex="1" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="datosEmail" maxWidth="-Infinity" onKeyPressed="#emailModificado" prefHeight="29.0" prefWidth="400.0" />
+                                    <Button fx:id="enviarCorreo" mnemonicParsing="false" onAction="#enviarCorreoUsuario" onMouseEntered="#entarBotonCorreo" onMouseExited="#salirBotonCorreo" prefHeight="8.0" prefWidth="60.0" style="-fx-background-color: #ADD8E6; -fx-border-color: black;" stylesheets="@../estilos.css" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Separator prefHeight="0.0" prefWidth="1846.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label prefHeight="33.0" prefWidth="1836.0" text="Historial de Citas">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="botonExportarCitasCliente" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exportarCitas" onMouseEntered="#exportarEntrar" onMouseExited="#exportarSalir" prefHeight="32.0" prefWidth="30.0" styleClass="boton-guardar" stylesheets="@../estilos.css">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <TableView fx:id="tablaHistoricoCitas" prefHeight="528.0" prefWidth="1646.0" styleClass="table-view-cabecera" stylesheets="@../estilos.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

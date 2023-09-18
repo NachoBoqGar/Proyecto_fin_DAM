@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.CalendarPicker?>
+
+<AnchorPane prefHeight="793.0" prefWidth="1542.0" styleClass="fondo-formularios" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SeleccionarFechaCitaController">
+    <children>
+        <GridPane layoutX="56.0" layoutY="60.0" prefHeight="900.0" prefWidth="1668.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+            </rowConstraints>
+            <children>
+                <GridPane prefHeight="900.0" prefWidth="1669.0">
+                    <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="579.0" minWidth="425.0" prefWidth="579.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="1090.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                  <RowConstraints maxHeight="196.0" minHeight="156.0" prefHeight="183.0" vgrow="NEVER" />
+                        <RowConstraints maxHeight="976.0" minHeight="500.0" prefHeight="550.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+               <children>
+                  <Label fx:id="etiquetaFechaSeleccionada" alignment="CENTER" prefHeight="108.0" prefWidth="1045.0" style="-fx-background-color: #BAEDB9;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin></Label>
+                  <GridPane fx:id="gridPaneCitas" prefHeight="782.0" prefWidth="1049.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" prefHeight="359.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" prefHeight="359.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="1077.0" style="-fx-border-color: black;" text="MAÑANA" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="1077.0" style="-fx-border-color: black;" text="TARDE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <VBox prefHeight="930.0" prefWidth="598.0" GridPane.rowIndex="1">
+                     <children>
+                            <Label prefHeight="92.0" prefWidth="579.0" text="Seleccionar Fecha">
+                                <font>
+                                    <Font name="System Bold" size="22.0" />
+                                </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                            </Label>
+                        <CalendarPicker fx:id="fechaCita" allowNull="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="579.0">
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                        </CalendarPicker>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <ImageView fitHeight="170.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calendar.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+                </GridPane>
+            <Button fx:id="botonCancelarSeleccionarFecha" cancelButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelarSeleccionarFecha" onMouseEntered="#cancelarEntrar" onMouseExited="#cancelarSalir" prefHeight="45.0" prefWidth="147.0" styleClass="boton-cancelar" stylesheets="@../estilos.css" text="Cancelar" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+               </GridPane.margin>
+            </Button>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

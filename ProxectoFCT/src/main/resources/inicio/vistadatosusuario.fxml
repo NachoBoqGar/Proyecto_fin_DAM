@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="793.0" prefWidth="1542.0" styleClass="fondo-formularios" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VistaDatosUsuarioController">
+                        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="793.0" prefWidth="1542.0" styleClass="fondo-formularios" stylesheets="@../estilos.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="NEVER" />
+                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="939.0" vgrow="ALWAYS" />
+                                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+                            </rowConstraints>
+                            <children>
+                                <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="1805.0" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                    <children>
+               <Button fx:id="botonRestaurar" disable="true" mnemonicParsing="false" onAction="#restaurarEmpleado" onMouseEntered="#entrarRestaurar" onMouseExited="#salirRestaurar" prefHeight="45.0" prefWidth="147.0" styleClass="boton-guardar" stylesheets="@../estilos.css" text="Restaurar">
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button fx:id="botonBajaEmpleado" layoutX="1191.0" layoutY="15.0" mnemonicParsing="false" onAction="#darBajaEmpleado" onMouseEntered="#entrarBaja" onMouseExited="#salirBaja" prefHeight="45.0" prefWidth="147.0" styleClass="boton-cancelar" stylesheets="@../estilos.css" text="Baja">
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                  </HBox.margin>
+               </Button>
+                                        <Button fx:id="botonCancelarUsuario" mnemonicParsing="false" onAction="#cerrarPestanaUsuario" onMouseEntered="#entrarCancelar" onMouseExited="#salirCancelar" prefHeight="45.0" prefWidth="147.0" styleClass="boton-cancelar" stylesheets="@../estilos.css" text="Cancelar">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                                            </HBox.margin>
+                                        </Button>
+               <Button fx:id="botonGuardar" disable="true" layoutX="1700.0" layoutY="15.0" mnemonicParsing="false" onAction="#guardarCambiosUsuario" onMouseEntered="#entrarGuardar" onMouseExited="#salirGuardar" prefHeight="45.0" prefWidth="147.0" styleClass="boton-guardar" stylesheets="@../estilos.css" text="Guardar">
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                  </HBox.margin>
+               </Button>
+                                    </children>
+            <GridPane.margin>
+               <Insets right="10.0" />
+            </GridPane.margin>
+                                </HBox>
+                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1">
+                                    <children>
+                                        <GridPane fx:id="gridPaneDatos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="963.0" prefWidth="1661.0" style="-fx-background-color: #D0EFD9;">
+                                            <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="240.0" prefWidth="793.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="53.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="815.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="170.0" minHeight="170.0" prefHeight="170.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="340.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="1.7976931348623157E308" minHeight="300.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <GridPane fx:id="gridPaneDatosPersonales" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="146.0" prefWidth="739.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                                                        <ColumnConstraints hgrow="NEVER" maxWidth="670.0" minWidth="10.0" prefWidth="611.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="38.0" prefWidth="166.0" text="Datos del Personales">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="38.0" prefWidth="65.0" text="DNI:" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="10.0" layoutY="37.0" prefHeight="28.0" prefWidth="107.0" text="Nombre:" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="40.0" prefWidth="102.0" text="Primer Apellido:" GridPane.rowIndex="3">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="10.0" layoutY="134.0" prefHeight="38.0" prefWidth="149.0" text="Segundo Apellido:" GridPane.rowIndex="4">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="datosDni" onKeyPressed="#dniModificado" prefHeight="25.0" prefWidth="444.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="datosNombre" onKeyPressed="#nombreModificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <TextField fx:id="datosApellido1" layoutX="235.0" layoutY="98.0" onKeyPressed="#apellido1Modificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                        <TextField fx:id="datosApellido2" layoutX="235.0" layoutY="138.0" onKeyPressed="#apellido2Modificado" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                    </children>
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                        <padding>
+                           <Insets left="10.0" />
+                        </padding>
+                                                </GridPane>
+                                                <GridPane layoutX="15.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="357.0" prefWidth="880.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                                                        <ColumnConstraints hgrow="NEVER" maxWidth="887.0" minWidth="0.0" prefWidth="365.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="32.0" prefWidth="161.0" text="Datos de Registro:">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="38.0" prefWidth="142.0" text="ID de empleado:" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="datosId" disable="true" editable="false" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                                                  <Label prefHeight="38.0" prefWidth="142.0" text="Fecha de alta:" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="datosFechaAlta" disable="true" editable="false" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label layoutX="20.0" layoutY="71.0" prefHeight="38.0" prefWidth="142.0" text="Rol:" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="20.0" layoutY="85.0" prefHeight="38.0" prefWidth="142.0" text="Estado:" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="datosEstado" disable="true" editable="false" layoutX="164.0" layoutY="89.0" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <ComboBox fx:id="datosRol" onAction="#rolModificado" prefHeight="25.0" prefWidth="696.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                    </children>
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                                </GridPane>
+                                                <GridPane layoutX="10.0" layoutY="138.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="128.0" prefWidth="827.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="679.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="36.0" prefWidth="166.0" text="Datos de Contacto">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="38.0" prefWidth="65.0" text="Teléfono:" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="10.0" layoutY="37.0" prefHeight="28.0" prefWidth="107.0" text="Dirección" GridPane.rowIndex="3">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="40.0" prefWidth="102.0" text="E-mail" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="datosTelefono" maxWidth="670.0" onKeyPressed="#telefonoModificado" prefHeight="25.0" prefWidth="670.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="datosEmail" maxWidth="670.0" onKeyPressed="#emailModificado" prefHeight="25.0" prefWidth="670.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <TextField fx:id="datosDireccion" layoutX="235.0" layoutY="98.0" maxWidth="670.0" onKeyPressed="#direccionModificado" prefHeight="25.0" prefWidth="670.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                    </children>
+                                                    <GridPane.margin>
+                                                        <Insets left="50.0" />
+                                                    </GridPane.margin>
+                        <padding>
+                           <Insets right="10.0" />
+                        </padding>
+                                                </GridPane>
+                                    <ImageView fx:id="iconoEmpleados" fitHeight="170.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@../images/employee.png" />
+                                       </image>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                          </Lighting>
+                                       </effect>
+                        <GridPane.margin>
+                           <Insets left="10.0" />
+                        </GridPane.margin>
+                                    </ImageView>
+                                    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="165.0" prefWidth="375.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="752.0" minWidth="0.0" prefWidth="676.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <GridPane.margin>
+                                          <Insets left="50.0" right="10.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="164.0" text="Datos de acceso:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="38.0" prefWidth="142.0" text="Usuario:" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="62.0" prefHeight="38.0" prefWidth="142.0" text="Contraseña:" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="datosUsuario" disable="true" editable="false" maxWidth="665.0" minWidth="50.0" prefHeight="25.0" prefWidth="665.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="datosPass" layoutX="164.0" layoutY="68.0" maxWidth="668.0" minWidth="50.0" onKeyPressed="#passModificado" prefHeight="25.0" prefWidth="668.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                       </children>
+                                    </GridPane>
+                     <Label fx:id="etiquetaCampoObligatorio" alignment="CENTER" prefHeight="30.0" prefWidth="388.0" text="* Falta algún campo obligatorio por cubrir" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </GridPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </GridPane>
+
+</AnchorPane>

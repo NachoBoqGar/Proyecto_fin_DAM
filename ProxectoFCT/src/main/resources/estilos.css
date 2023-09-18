@@ -1,0 +1,65 @@
+.campo-incorrecto {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+.mensage-advertencia{
+    -fx-text-fill: red;
+    -fx-font-size: 16px;
+}
+
+.citas-completas {
+    -fx-background-color: rgba(255, 0, 0, 0.5);
+}
+
+.citas-disponibles {
+    -fx-background-color: lightgreen;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0.4, 0, 0);
+}
+.citas-disponibles-seleccionado:hover{
+        -fx-border-color: black;
+}
+
+.fondo-formularios{
+        -fx-background-color: white;
+}
+.boton-cancelar{
+-fx-background-color: #708090;
+-fx-text-fill: white;
+-fx-font-size: 16px;
+-fx-border-color: black
+}
+
+.boton-guardar {
+    -fx-background-color:  #ADD8E6;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-border-color: black
+}
+
+.boton:hover{
+        -fx-border-color: black;
+}
+
+.table-view-cabecera .column-header {
+
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.boton-menu{
+
+    -fx-background-color:  #2e90ff;
+    -fx-text-fill: white;
+    -fx-border-color: black
+}
+
